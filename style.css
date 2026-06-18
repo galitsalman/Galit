@@ -663,3 +663,122 @@ footer .footer-links a:not(:last-child)::after {
   .cards-3, .programs, .steps, .fit-grid { gap: 10px !important; }
   .psy-card, .fit-card, .program, .step { padding: 17px 14px !important; }
 }
+
+/* =========================================================
+   FINAL VISUAL FIX FROM MOBILE SCREENSHOTS
+   1) Remove duplicated hero label on mobile.
+   2) Reduce first-screen overload on mobile.
+   3) Stop process icons from overlapping text.
+   ========================================================= */
+@media (max-width: 768px) {
+  /* The header already says "אימון אישי · NLP". Hide duplicate pill in hero. */
+  .hero-copy > .eyebrow {
+    display: none !important;
+  }
+
+  /* Less visual noise on first screen */
+  .hero {
+    padding-top: 92px !important;
+    padding-bottom: 30px !important;
+  }
+
+  .hero-grid {
+    gap: 18px !important;
+  }
+
+  .hero h1 {
+    margin-top: 10px !important;
+    font-size: clamp(1.85rem, 7.8vw, 2.42rem) !important;
+    line-height: 1.13 !important;
+  }
+
+  .hero .lead {
+    font-size: .94rem !important;
+    line-height: 1.6 !important;
+    max-width: 34em !important;
+  }
+
+  /* Keep the two main actions, remove the three extra badges on mobile */
+  .hero .trust {
+    display: none !important;
+  }
+
+  .hero .actions {
+    margin-top: 16px !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Process cards: icon and text in real grid, no absolute overlap */
+  .steps {
+    gap: 12px !important;
+  }
+
+  .steps::before {
+    display: none !important;
+    content: none !important;
+  }
+
+  .step {
+    display: grid !important;
+    grid-template-columns: 52px minmax(0, 1fr) !important;
+    column-gap: 14px !important;
+    row-gap: 4px !important;
+    align-items: start !important;
+    padding: 18px 16px !important;
+    text-align: right !important;
+    direction: rtl !important;
+  }
+
+  .step .icon-pro {
+    position: static !important;
+    grid-column: 1 !important;
+    grid-row: 1 / span 2 !important;
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 16px !important;
+    margin: 0 !important;
+    align-self: start !important;
+    justify-self: center !important;
+    z-index: auto !important;
+  }
+
+  .step .icon-pro svg {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  .step h3,
+  .step p {
+    grid-column: 2 !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    text-align: right !important;
+  }
+
+  .step h3 {
+    margin-bottom: 2px !important;
+    line-height: 1.25 !important;
+  }
+
+  .step p {
+    margin: 0 !important;
+    line-height: 1.55 !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .hero .actions {
+    grid-template-columns: 1fr !important;
+  }
+  .step {
+    grid-template-columns: 46px minmax(0, 1fr) !important;
+    column-gap: 10px !important;
+    padding: 16px 14px !important;
+  }
+  .step .icon-pro {
+    width: 42px !important;
+    height: 42px !important;
+  }
+}
