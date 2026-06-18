@@ -1042,3 +1042,200 @@ body.no-motion .reveal.visible{
   0%,60%,100%{opacity:0; transform:translateX(50%) translateY(-92%) scale(.94)}
   66%,82%{opacity:1; transform:translateX(50%) translateY(-105%) scale(1)}
 }
+
+
+
+/* =========================================================
+   FIX: COOKIE BANNER + DELAY FLOATING CTA / WHATSAPP
+   ========================================================= */
+
+/* Do not attack the user immediately */
+body.delay-floating-ui:not(.floating-ready) .wa,
+body.delay-floating-ui:not(.floating-ready) .access,
+body.delay-floating-ui:not(.floating-ready) .v9-mini-cta{
+  opacity:0!important;
+  pointer-events:none!important;
+  transform:translateY(14px)!important;
+}
+
+body.cookie-open .wa,
+body.cookie-open .access,
+body.cookie-open .v9-mini-cta{
+  opacity:0!important;
+  pointer-events:none!important;
+}
+
+/* Cookie banner must sit above the page, not inside/under footer */
+.cookie-banner{
+  position:fixed!important;
+  left:50%!important;
+  right:auto!important;
+  bottom:24px!important;
+  transform:translateX(-50%) translateY(18px)!important;
+  width:min(760px, calc(100vw - 32px))!important;
+  max-width:760px!important;
+  z-index:20000!important;
+  display:flex!important;
+  opacity:0!important;
+  pointer-events:none!important;
+  visibility:hidden!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  gap:16px!important;
+  background:rgba(255,255,255,.98)!important;
+  border:1px solid rgba(149,52,92,.22)!important;
+  border-radius:22px!important;
+  padding:15px 16px!important;
+  box-shadow:0 18px 70px rgba(35,16,24,.24)!important;
+  backdrop-filter:blur(20px)!important;
+  -webkit-backdrop-filter:blur(20px)!important;
+}
+
+.cookie-banner.show{
+  opacity:1!important;
+  pointer-events:auto!important;
+  visibility:visible!important;
+  transform:translateX(-50%) translateY(0)!important;
+}
+
+.cookie-banner > div:first-child{
+  min-width:0!important;
+  flex:1!important;
+}
+
+.cookie-banner strong{
+  display:block!important;
+  font-size:1rem!important;
+  line-height:1.2!important;
+  margin-bottom:3px!important;
+}
+
+.cookie-banner p{
+  margin:0!important;
+  font-size:.9rem!important;
+  line-height:1.45!important;
+}
+
+.cookie-actions{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:8px!important;
+  flex:0 0 auto!important;
+}
+
+.cookie-actions button,
+.cookie-actions a{
+  position:relative!important;
+  z-index:20002!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  min-width:78px!important;
+  height:40px!important;
+  border-radius:999px!important;
+  padding:0 13px!important;
+  cursor:pointer!important;
+  pointer-events:auto!important;
+  font-size:.9rem!important;
+  white-space:nowrap!important;
+  text-decoration:none!important;
+}
+
+.cookie-actions #cookieAccept{
+  background:linear-gradient(135deg,var(--wine),var(--wine2))!important;
+  color:#fff!important;
+  border-color:transparent!important;
+}
+
+.cookie-actions #cookieReject,
+.cookie-actions a{
+  background:#fff!important;
+  color:var(--wine)!important;
+  border:1px solid var(--line)!important;
+}
+
+/* stop overlap with cookie on desktop */
+@media(min-width:791px){
+  .v9-mini-cta{
+    bottom:26px!important;
+    right:104px!important;
+    z-index:980!important;
+  }
+
+  .wa,
+  .access{
+    bottom:24px!important;
+  }
+}
+
+/* Mobile: cookie first, floating buttons later */
+@media(max-width:790px){
+  .cookie-banner{
+    left:12px!important;
+    right:12px!important;
+    bottom:14px!important;
+    transform:translateY(18px)!important;
+    width:auto!important;
+    max-width:none!important;
+    flex-direction:column!important;
+    text-align:center!important;
+    border-radius:20px!important;
+    padding:14px!important;
+    gap:12px!important;
+  }
+
+  .cookie-banner.show{
+    transform:translateY(0)!important;
+  }
+
+  .cookie-actions{
+    width:100%!important;
+    gap:7px!important;
+  }
+
+  .cookie-actions button,
+  .cookie-actions a{
+    flex:1!important;
+    min-width:0!important;
+    height:40px!important;
+    padding:0 8px!important;
+    font-size:.86rem!important;
+  }
+
+  /* after cookie closes, buttons are low and calm */
+  .wa{
+    width:50px!important;
+    height:50px!important;
+    left:14px!important;
+    bottom:14px!important;
+  }
+
+  .access{
+    right:14px!important;
+    bottom:14px!important;
+  }
+
+  .access-toggle{
+    width:50px!important;
+    height:50px!important;
+  }
+
+  .v9-mini-cta{
+    left:84px!important;
+    right:84px!important;
+    bottom:17px!important;
+    height:40px!important;
+    padding:4px 6px!important;
+    animation:none!important;
+  }
+
+  .v9-mini-cta .mini-bubble{
+    animation:bubblePeek 12s ease-in-out infinite!important;
+  }
+
+  .v9-mini-cta a{
+    height:30px!important;
+    font-size:.74rem!important;
+  }
+}
