@@ -47,3 +47,51 @@ h1{filter:drop-shadow(0 18px 36px rgba(52,23,35,.08))}.lead{color:#5f4a54!import
   .access{right:16px!important;bottom:18px!important}
   .wa{left:16px!important;bottom:18px!important}
 }
+
+
+/* ===== MOBILE REAL FIX - Galit site ===== */
+@media (max-width: 790px){
+  html{scroll-padding-top:74px;font-size:100%!important}
+  body{line-height:1.55;background:#fffaf7!important}
+  .grain,.cursor,.orbit,.v9-orb,body:before,body:after{display:none!important}
+  .container{width:100%!important;padding:0 18px!important}
+  .nav-inner{height:66px!important;border-radius:0!important;padding:0 14px!important;background:rgba(255,255,255,.96)!important}
+  .brand-mark{width:42px!important;height:42px!important;border-radius:15px!important;font-size:1.2rem!important}
+  .brand strong{font-size:.98rem!important}.brand small{font-size:.75rem!important}
+  body.menu-open .nav-links{top:72px!important;left:12px!important;right:12px!important;border-radius:20px!important;padding:12px!important}
+  .hero{padding:92px 0 36px!important;min-height:0!important;overflow:hidden!important}
+  .hero:before,.hero:after{display:none!important}
+  .hero-grid{display:flex!important;flex-direction:column!important;gap:22px!important}
+  .hero-copy{order:2!important;text-align:right!important}
+  .portrait-wrap{order:1!important;min-height:0!important;width:100%!important}
+  .portrait-card{position:relative!important;width:100%!important;border-radius:28px!important;padding:8px!important;box-shadow:0 18px 46px rgba(85,35,58,.14)!important;background:#fff!important}
+  .portrait-card:before{display:none!important}
+  .portrait-card img{height:360px!important;max-height:360px!important;width:100%!important;object-fit:cover!important;object-position:center top!important;border-radius:22px!important}
+  .floating-card{right:16px!important;bottom:16px!important;border-radius:18px!important;padding:12px 14px!important;background:rgba(255,255,255,.88)!important}
+  h1{font-size:2.35rem!important;line-height:1.12!important;letter-spacing:-.035em!important;max-width:100%!important;filter:none!important}
+  h2{font-size:2rem!important;line-height:1.15!important;letter-spacing:-.03em!important}
+  h3{font-size:1.22rem!important}.lead{font-size:1.02rem!important;line-height:1.75!important;margin-top:16px!important}
+  p{font-size:1rem!important;line-height:1.75!important}.eyebrow{font-size:.86rem!important;padding:7px 12px!important;margin-bottom:12px!important}
+  .actions{margin:22px 0 18px!important;gap:10px!important}.btn{width:100%!important;padding:14px 18px!important;min-height:50px!important;font-size:.98rem!important}
+  .trust{display:grid!important;grid-template-columns:1fr!important;gap:8px!important}.trust span{border-radius:18px!important;justify-content:flex-start!important}
+  .bridge{padding:10px 0 28px!important}.bridge-box{padding:18px!important;border-radius:22px!important;text-align:center!important}.bridge-box strong{font-size:1.12rem!important;line-height:1.6!important}
+  .section{padding:52px 0!important}.section-head{margin-bottom:26px!important;text-align:right!important}.section-head .eyebrow{margin-inline:0!important}.section-head:after{margin-right:0!important;margin-left:auto!important}
+  .cards-3,.fit-grid,.steps,.programs,.about-badges{grid-template-columns:1fr!important;gap:14px!important}
+  .psy-card,.fit-card,.step,.program{padding:22px!important;border-radius:24px!important;min-height:0!important;box-shadow:0 12px 32px rgba(85,35,58,.08)!important;background:#fff!important}
+  .icon-pro{width:64px!important;height:64px!important;border-radius:22px!important;margin-bottom:14px!important}.icon-pro svg{width:36px!important;height:36px!important}
+  .reframe{grid-template-columns:1fr!important;text-align:right!important;padding:20px!important;border-radius:24px!important}.hands-heart svg{width:58px!important;height:58px!important}.reframe .btn{margin-top:6px!important}
+  .split,.process-wrap,.testi,.contact-card{grid-template-columns:1fr!important;gap:22px!important}
+  .image-panel{min-height:0!important;border-radius:26px!important;box-shadow:0 16px 42px rgba(85,35,58,.12)!important}.image-panel img{height:390px!important;min-height:390px!important;object-fit:cover!important;object-position:center top!important}.quote-over{font-size:1.2rem!important;right:18px!important;left:18px!important;bottom:18px!important}
+  .ba{grid-template-columns:1fr!important;gap:10px!important}.ba div{padding:18px!important;border-radius:20px!important}blockquote{padding:20px!important;border-radius:20px!important;font-size:1rem!important}
+  .program.featured{transform:none!important}.tag{position:static!important;display:inline-flex!important;width:max-content!important;margin-bottom:10px!important}
+  .testimonial-photo{height:360px!important;border-radius:26px!important}.testimonial-photo img{object-position:center top!important}.slider{min-height:0!important}.slide{padding:22px!important;border-radius:24px!important}.slide p{font-size:1.08rem!important}
+  summary{padding:18px 20px!important;font-size:1rem!important}details p{padding:0 20px 18px!important}
+  .contact-info,form{padding:24px 20px!important}.contact-card{border-radius:28px!important}.big-phone{font-size:1.18rem!important;width:100%!important;justify-content:center!important}.contact{padding-bottom:120px!important}
+  input,textarea{font-size:16px!important;border-radius:16px!important;padding:14px!important}
+  .wa{width:54px!important;height:54px!important;left:14px!important;bottom:14px!important}.access{right:14px!important;bottom:14px!important}.access-toggle{width:54px!important;height:54px!important}.access-panel{bottom:66px!important;width:220px!important}
+  .v9-mini-cta{display:none!important}
+  .reveal{opacity:1!important;transform:none!important;filter:none!important;transition:none!important}
+  footer{padding:30px 0!important}.foot{display:grid!important;text-align:center!important;justify-content:center!important}
+}
+@media (max-width: 390px){h1{font-size:2.08rem!important}.portrait-card img{height:320px!important;max-height:320px!important}.image-panel img,.testimonial-photo{height:330px!important;min-height:330px!important}.container{padding:0 14px!important}}
+@media (min-width:791px) and (max-width:1080px){.portrait-card img{height:560px!important;object-position:center top!important}.image-panel img{object-position:center top!important}}
