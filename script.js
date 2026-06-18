@@ -29,7 +29,7 @@
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape') {
       setMenu(false);
-      $('#access')?.classList.remove('open');
+      setAccess(false);
     }
   });
   document.addEventListener('click', event => {
@@ -146,10 +146,17 @@
     }));
   }
 
+  function setAccess(open) {
+    access?.classList.toggle('open', !!open);
+    accessToggle?.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+
+  accessToggle?.setAttribute('aria-expanded', 'false');
+
   accessToggle?.addEventListener('click', event => {
     event.preventDefault();
     event.stopPropagation();
-    access?.classList.toggle('open');
+    setAccess(!access?.classList.contains('open'));
   });
 
   access?.addEventListener('click', event => {
@@ -171,7 +178,7 @@
   document.addEventListener('click', event => {
     if (!access?.classList.contains('open')) return;
     if (access.contains(event.target)) return;
-    access.classList.remove('open');
+    setAccess(false);
   });
 
   /* מדיניות details */

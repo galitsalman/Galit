@@ -234,3 +234,432 @@ footer .foot a{
     padding:6px 3px!important;
   }
 }
+
+
+/* =========================================================
+   FINAL QC FULL APPLIED — mobile, footer, floating UI, density
+   ========================================================= */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+}
+
+@media (hover: none), (pointer: coarse) {
+  .cursor,
+  .grain,
+  .orbit,
+  .v9-orb {
+    display: none !important;
+  }
+
+  .tilt,
+  .magnetic,
+  .btn,
+  .portrait-card {
+    transform: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 104px !important;
+    padding-bottom: 34px !important;
+  }
+
+  .hero-grid {
+    gap: 22px !important;
+  }
+
+  .hero-copy {
+    max-width: 100% !important;
+    margin-inline: auto !important;
+  }
+
+  .hero-copy .eyebrow {
+    font-size: .82rem !important;
+    padding: 7px 12px !important;
+    margin-bottom: 12px !important;
+    white-space: nowrap !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.95rem, 8.6vw, 2.75rem) !important;
+    line-height: 1.12 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .hero .lead {
+    font-size: .98rem !important;
+    line-height: 1.65 !important;
+    margin-top: 14px !important;
+    margin-bottom: 0 !important;
+  }
+
+  .hero .actions {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+    margin: 18px 0 14px !important;
+  }
+
+  .hero .actions .btn {
+    width: 100% !important;
+    min-height: 46px !important;
+    padding: 10px 8px !important;
+    font-size: .84rem !important;
+    line-height: 1.2 !important;
+    white-space: normal !important;
+  }
+
+  .hero .actions .btn svg {
+    display: none !important;
+  }
+
+  .hero .trust {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 6px !important;
+    margin-top: 4px !important;
+  }
+
+  .hero .trust span {
+    min-width: 0 !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 8px 5px !important;
+    font-size: .73rem !important;
+    line-height: 1.15 !important;
+    border-radius: 14px !important;
+  }
+
+  .hero .trust svg {
+    display: none !important;
+  }
+
+  .portrait-card img {
+    height: min(350px, 48vh) !important;
+    object-position: center top !important;
+  }
+
+  .floating-card {
+    font-size: .88rem !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .hero .actions {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hero .trust {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hero .trust span:nth-child(n+2) {
+    display: none !important;
+  }
+
+  .hero h1 {
+    font-size: 1.9rem !important;
+  }
+
+  .portrait-card img {
+    height: 315px !important;
+  }
+}
+
+footer,
+footer .container,
+footer .foot {
+  width: 100% !important;
+  max-width: 100% !important;
+  text-align: center !important;
+  direction: rtl !important;
+}
+
+footer .foot {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  margin-inline: auto !important;
+}
+
+footer .foot > div,
+footer .footer-links {
+  width: min(100%, 760px) !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  gap: 6px 8px !important;
+  margin-inline: auto !important;
+  line-height: 1.9 !important;
+}
+
+footer .foot strong,
+footer .foot small {
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+}
+
+@media (max-width: 768px) {
+  .wa,
+  .access {
+    bottom: 14px !important;
+  }
+
+  .wa {
+    left: 14px !important;
+  }
+
+  .access {
+    right: 14px !important;
+  }
+
+  .cookie-open .wa,
+  .cookie-open .access {
+    bottom: 132px !important;
+  }
+
+  .v9-mini-cta {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .cookie-banner {
+    left: 10px !important;
+    right: 10px !important;
+    bottom: 10px !important;
+    padding: 12px !important;
+    border-radius: 18px !important;
+    gap: 10px !important;
+  }
+
+  .cookie-banner p {
+    font-size: .86rem !important;
+    line-height: 1.45 !important;
+  }
+
+  .cookie-actions {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr !important;
+    gap: 6px !important;
+  }
+
+  .cookie-actions button,
+  .cookie-actions a {
+    height: 38px !important;
+    font-size: .78rem !important;
+    padding: 0 6px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 42px 0 !important;
+  }
+
+  .section-head {
+    margin-bottom: 22px !important;
+  }
+
+  .section-head p,
+  .text-stack p,
+  .psy-card p,
+  .fit-card p,
+  .program p,
+  .step p {
+    font-size: .98rem !important;
+    line-height: 1.65 !important;
+  }
+
+  .psy-card,
+  .fit-card,
+  .program,
+  .step {
+    padding: 18px 15px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .access-panel {
+    width: min(270px, calc(100vw - 28px)) !important;
+    max-height: 70vh !important;
+    overflow-y: auto !important;
+  }
+}
+
+
+/* =========================================================
+   FINAL VERIFIED PATCH — applied after full audit
+   ========================================================= */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden !important;
+}
+
+button, a, summary, input, textarea {
+  touch-action: manipulation;
+}
+
+/* Footer: remove text-node separator dependency; center every link cleanly */
+footer .footer-links {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 8px 0 !important;
+  max-width: 780px !important;
+  margin-inline: auto !important;
+  padding-inline: 10px !important;
+  text-align: center !important;
+}
+footer .footer-links a {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 2px 7px !important;
+  white-space: nowrap !important;
+}
+footer .footer-links a:not(:last-child)::after {
+  content: "·";
+  display: inline-block;
+  margin-inline-start: 12px;
+  color: rgba(117,97,106,.85);
+  font-weight: 900;
+}
+@media (max-width: 768px) {
+  footer { padding: 28px 0 104px !important; }
+  footer .footer-links {
+    width: min(100%, 330px) !important;
+    max-width: 330px !important;
+    gap: 4px 0 !important;
+    line-height: 1.7 !important;
+  }
+  footer .footer-links a {
+    font-size: .94rem !important;
+    padding: 2px 6px !important;
+  }
+  footer .footer-links a:not(:last-child)::after {
+    margin-inline-start: 10px;
+  }
+}
+@media (max-width: 360px) {
+  footer .footer-links {
+    max-width: 280px !important;
+  }
+  footer .footer-links a {
+    font-size: .88rem !important;
+    padding-inline: 5px !important;
+  }
+}
+
+/* Mobile hero: clean, compact, readable */
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 96px !important;
+    padding-bottom: 28px !important;
+  }
+  .hero-copy .eyebrow {
+    max-width: 100% !important;
+    white-space: normal !important;
+    text-align: center !important;
+    justify-content: center !important;
+    font-size: .8rem !important;
+  }
+  .hero h1 {
+    font-size: clamp(1.9rem, 8.1vw, 2.55rem) !important;
+    line-height: 1.12 !important;
+  }
+  .hero .lead {
+    font-size: .96rem !important;
+    line-height: 1.62 !important;
+    max-width: 36em !important;
+    margin-inline: auto !important;
+  }
+  .hero .actions {
+    grid-template-columns: minmax(0,1fr) minmax(0,1fr) !important;
+    gap: 8px !important;
+    margin-top: 16px !important;
+    margin-bottom: 10px !important;
+  }
+  .hero .actions .btn {
+    min-width: 0 !important;
+    min-height: 44px !important;
+    border-radius: 16px !important;
+    font-size: .82rem !important;
+    padding: 9px 7px !important;
+  }
+  .hero .trust {
+    grid-template-columns: repeat(3, minmax(0,1fr)) !important;
+    gap: 5px !important;
+  }
+  .hero .trust span {
+    min-width: 0 !important;
+    min-height: 42px !important;
+    padding: 7px 4px !important;
+    font-size: .7rem !important;
+    line-height: 1.12 !important;
+  }
+  .portrait-card img {
+    height: min(330px, 46vh) !important;
+    object-position: center top !important;
+  }
+}
+@media (max-width: 390px) {
+  .hero .actions { grid-template-columns: 1fr !important; }
+  .hero .trust { grid-template-columns: 1fr !important; }
+  .hero .trust span:nth-child(n+2) { display: none !important; }
+  .portrait-card img { height: 300px !important; }
+}
+
+/* Floating UI: never cover each other */
+.wa, .access { z-index: 1700 !important; }
+.access { z-index: 1750 !important; }
+.cookie-banner { z-index: 2600 !important; }
+@media (max-width: 768px) {
+  .wa, .access-toggle {
+    width: 48px !important;
+    height: 48px !important;
+  }
+  .wa { left: 12px !important; bottom: 12px !important; }
+  .access { right: 12px !important; bottom: 12px !important; }
+  .cookie-open .wa, .cookie-open .access { bottom: 126px !important; }
+  .cookie-banner {
+    max-height: 44vh !important;
+    overflow-y: auto !important;
+  }
+}
+
+/* Accessibility panel usability */
+.access-panel button { text-align: center !important; }
+@media (max-width: 768px) {
+  .access-panel {
+    right: 0 !important;
+    bottom: 60px !important;
+    width: min(270px, calc(100vw - 24px)) !important;
+    max-height: 68vh !important;
+    overflow-y: auto !important;
+  }
+}
+
+/* Reduce density after hero on mobile */
+@media (max-width: 768px) {
+  .section { padding: 38px 0 !important; }
+  .section-head { margin-bottom: 20px !important; }
+  .cards-3, .programs, .steps, .fit-grid { gap: 10px !important; }
+  .psy-card, .fit-card, .program, .step { padding: 17px 14px !important; }
+}
