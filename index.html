@@ -32,7 +32,7 @@ const progress=$('#progress');addEventListener('scroll',()=>{const h=document.do
   body.prepend(orb1, orb2);
   const mini = document.createElement('div');
   mini.className='v9-mini-cta';
-  mini.innerHTML='<strong>רוצה לבדוק התאמה?</strong><a href="tel:0507800713">050-7800713</a>';
+  mini.innerHTML='<span class="mini-bubble">שיחה חינמית?</span><a href="tel:0507800713">050-7800713</a>';
   body.appendChild(mini);
   const hero = document.querySelector('.hero');
   const showMini = () => mini.classList.toggle('show', scrollY > (hero ? hero.offsetHeight*.65 : 650));
